@@ -1,6 +1,6 @@
 # Hi, I'm Bakary 👋
  
-DevSecOps Engineer based in the UK**. I specialise in embedding security across the full software delivery lifecycle from code commit to cloud infrastructure. I think in systems: how things connect, where they break, and how to make them resilient.
+DevSecOps Engineer based in the UK. I specialise in embedding security across the full software delivery lifecycle from code commit to cloud infrastructure. I think in systems: how things connect, where they break, and how to make them resilient.
  
 My approach is practical and builder-focused. I don't just flag vulnerabilities. I design the pipelines, policies, and monitoring that prevent them. I'm passionate about helping engineering teams *understand* security rather than just comply with it.
  
