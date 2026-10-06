@@ -16,13 +16,19 @@ A reusable GitHub Actions security pipeline that any repo can call, plus the AWS
 - **Supply chain:** SBOM generation (Syft, CycloneDX) with Grype vulnerability scanning
 - **Infrastructure:** modular Terraform (VPC, EKS, security modules), Kubernetes hardening, OPA/Conftest policy checks, ArgoCD GitOps, Secrets Manager with External Secrets Operator
 - **Detection and response:** Fluent Bit to OpenSearch SIEM, Prometheus and Grafana, GuardDuty to Lambda SOAR, Slack alerts on failed security gates
-- **Governance:** finding severity policy and an incident response runbook based on NIST SP 800-61
+- **Governance:** finding severity policy, an incident response runbook based on NIST SP 800-61, and compliance mapping to ISO 27001, SOC 2, and NIST CSF
 
 **[ai-vibecode-lab](https://github.com/baks7101/ai-vibecode-lab)** · the product it protects
 A deliberately vulnerable Node.js patient triage API demonstrating the OWASP Top 10 for LLM Applications.
 - Runtime prompt injection detection with LLM-Guard (fail-closed), instrumented with Prometheus metrics
 - AI-BOM manifest checked against a security-team approved list on every PR, so unapproved models, frameworks, or MCP servers block the merge
 - Calls SecureStack's pipeline via `workflow_call`, mirroring how a central security team serves product teams
+
+**[SecureStack Threat Model](https://github.com/baks7101/securestack-platform/blob/main/security/docs/threat-model.md)** · the design-time view
+A STRIDE threat model of the platform, written to decide which controls to build before building them.
+- Maps the data flow from browser through the API to the database, Secrets Manager, and audit logging
+- Covers all six STRIDE categories: spoofing, tampering, repudiation, information disclosure, denial of service, and elevation of privilege
+- Ties each threat to the component it targets, the control that mitigates it, and whether that control is implemented or still planned
 
 ---
 
