@@ -1,31 +1,54 @@
 # Hi, I'm Bakary 👋
- 
-DevSecOps Engineer based in the UK. I specialise in embedding security across the full software delivery lifecycle from code commit to cloud infrastructure. I think in systems: how things connect, where they break, and how to make them resilient.
- 
-My approach is practical and builder-focused. I don't just flag vulnerabilities. I design the pipelines, policies, and monitoring that prevent them. I'm passionate about helping engineering teams *understand* security rather than just comply with it.
- 
+
+**DevSecOps Engineer | Security Engineer** · Birmingham, UK
+
+I build security into the software delivery lifecycle, from code commit to cloud infrastructure. I think in systems: how things connect, where they break, and how to make them resilient.
+
+My approach is practical and builder-focused. I don't just flag vulnerabilities. I design the pipelines, policies, and monitoring that prevent them, and then I test those controls to prove they actually fire. I'm passionate about helping engineering teams *understand* security rather than just comply with it.
+
 ---
- 
-## 🔐 What I'm Working On
- 
-- **[SecureStack Platform](https://github.com/baks7101/securestack-platform)** — 12-module enterprise DevSecOps project on AWS EKS. Covers CI/CD hardening, Terraform IaC security, Kubernetes hardening, DAST (OWASP ZAP), OPA/Conftest, Secrets Manager, Prometheus/Grafana, SOAR with Lambda, and compliance mapping.
-- **[SecureWatch Platform](https://github.com/baks7101/securewatch-platform)** — Healthcare-focused DevSecOps project with a vulnerable Flask app, Azure DevOps SAST pipeline (Gitleaks, Semgrep, Trivy), AWS threat detection (GuardDuty, CloudTrail), and a full ELK SIEM stack.
+
+### 🔐 Featured Work
+
+**[SecureStack Platform](https://github.com/baks7101/securestack-platform)** · the security platform
+A reusable GitHub Actions security pipeline that any repo can call, plus the AWS infrastructure it protects.
+- **Pipeline:** Gitleaks, CodeQL, Semgrep (custom rules), Trivy SCA, dependency pin checks, Checkov IaC scanning, container scanning, AI governance checks, AI-BOM validation, OWASP ZAP DAST, and a security gate that reports every stage result
+- **Supply chain:** SBOM generation (Syft, CycloneDX) with Grype vulnerability scanning
+- **Infrastructure:** modular Terraform (VPC, EKS, security modules), Kubernetes hardening, OPA/Conftest policy checks, ArgoCD GitOps, Secrets Manager with External Secrets Operator
+- **Detection and response:** Fluent Bit to OpenSearch SIEM, Prometheus and Grafana, GuardDuty to Lambda SOAR, Slack alerts on failed security gates
+- **Governance:** finding severity policy and an incident response runbook based on NIST SP 800-61
+
+**[ai-vibecode-lab](https://github.com/baks7101/ai-vibecode-lab)** · the product it protects
+A deliberately vulnerable Node.js patient triage API demonstrating the OWASP Top 10 for LLM Applications.
+- Runtime prompt injection detection with LLM-Guard (fail-closed), instrumented with Prometheus metrics
+- AI-BOM manifest checked against a security-team approved list on every PR, so unapproved models, frameworks, or MCP servers block the merge
+- Calls SecureStack's pipeline via `workflow_call`, mirroring how a central security team serves product teams
+
 ---
- 
-## 🛠️ Tools & Tech
- 
-`GitHub Actions` `Azure DevOps` `Terraform` `Kubernetes` `AWS` `Python` `Node.js` `OWASP ZAP` `Semgrep` `Trivy` `Gitleaks` `OPA` `Prometheus` `Grafana` `ELK Stack`
- 
+
+### 🧪 How I Test My Own Controls
+
+Every control gets its own `test/*` branch that plants one vulnerability (a committed secret, a vulnerable dependency, an unapproved AI component) to prove the pipeline catches it and blocks the merge. Doing this found real problems I have since fixed:
+- A security gate that could pass without checking every stage, and later one that silently never ran
+- A Semgrep rule that missed a real hardcoded API key while flagging a harmless default
+- A scanner that showed green because it never actually scanned anything, so I removed it and documented why
+
 ---
- 
-## 📜 Certifications
- 
-`CompTIA Security+` `AWS Cloud Practitioner` `HashiCorp Terraform Associate` `Google Cybersecurity Certificate` `Cyber Agoge DevSecOps`
- 
+
+### 🛠️ Tools & Tech
+
+`GitHub Actions` `Terraform` `AWS` `EKS` `Kubernetes` `ArgoCD` `Docker` `Node.js` `Python` `Semgrep` `CodeQL` `Gitleaks` `Trivy` `Checkov` `Syft` `Grype` `OWASP ZAP` `OPA/Conftest` `LLM-Guard` `Prometheus` `Grafana` `OpenSearch` `GuardDuty`
+
 ---
- 
-## 📫 Reach Me
- 
-- 💼 [LinkedIn](https://www.linkedin.com/in/bakary-sillah)
-- 🐙 [GitHub](https://github.com/baks7101)
-- 🔍 Open to Security Engineer & DevSecOps roles in the UK
+
+### 📜 Certifications
+
+`CompTIA Security+` `AWS Cloud Practitioner` `HashiCorp Terraform Associate` `Google Cybersecurity Certificate` `Cyber Agoge DevSecOps` `GitHub Actions (in progress)`
+
+---
+
+### 📫 Reach Me
+
+- 💼 [LinkedIn](https://www.linkedin.com/in/bakary-sillah-4877ab124)
+- 📧 bsillah15@gmail.com
+- 🔍 Open to Security Engineer and DevSecOps roles in the UK
