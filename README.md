@@ -24,7 +24,7 @@ A deliberately vulnerable Node.js patient triage API demonstrating the OWASP Top
 - AI-BOM manifest checked against a security-team approved list on every PR, so unapproved models, frameworks, or MCP servers block the merge
 - Calls SecureStack's pipeline via `workflow_call`, mirroring how a central security team serves product teams
 
-**[SecureStack Threat Model](https://github.com/baks7101/securestack-platform/blob/main/security/docs/threat-model.md)** · the design-time view
+**[SecureStack Threat Model](https://github.com/baks7101/SecureStack-Threat-Model)** · the design-time view
 A STRIDE threat model of the platform, written to decide which controls to build before building them.
 - Maps the data flow from browser through the API to the database, Secrets Manager, and audit logging
 - Covers all six STRIDE categories: spoofing, tampering, repudiation, information disclosure, denial of service, and elevation of privilege
