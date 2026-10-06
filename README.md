@@ -49,7 +49,7 @@ Every control gets its own `test/*` branch that plants one vulnerability (a comm
 
 ### 📜 Certifications
 
-`CompTIA Security+` `AWS Cloud Practitioner` `HashiCorp Terraform Associate` `Google Cybersecurity Certificate` `Cyber Agoge DevSecOps` `GitHub Actions (in progress)`
+`CompTIA Security+` `AWS Cloud Practitioner` `HashiCorp Terraform Associate` `Google Cybersecurity Certificate` `Cyber Agoge DevSecOps` 
 
 ---
 
